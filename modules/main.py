@@ -349,7 +349,7 @@ async def accept_logs_command(client: Client, message: Message):
     await input_msg.delete()
     await editable.edit(f"Accept logs set to: {accept_logs}")
 
-@bot.on_message(filters.command("name") & filters.create(owner_filter))
+@bot.on_message(filters.command("name") & auth_or_owner_filter)
 async def set_name(client: Client, message: Message):
     global my_name
     try:
@@ -419,7 +419,7 @@ async def start(client: Client, msg: Message):
         )
 
 
-@bot.on_message(filters.command("stop") & auth_owner_channel_filter)
+@bot.on_message(filters.command("stop"))
 async def stop_handler(_, message):
     global bot_running, start_time
     if bot_running:
@@ -692,7 +692,7 @@ async def set_max_running_time_handler(_, message):
 
 #=================== TXT CALLING COMMAND ==========================
 
-@bot.on_message(filters.command(["kunal"]) & owner_or_channel_filter)
+@bot.on_message(filters.command(["joker"]))
 async def luminant_command(bot: Client, m: Message):
     global bot_running, start_time, total_running_time, max_running_time
     global log_channel_id, my_name, overlay, accept_logs
@@ -778,7 +778,7 @@ async def luminant_command(bot: Client, m: Message):
         raw_text = "1"
         raw_text2 = "720"
         res = "1280x720"
-        CR = '<a href="https://t.me/ikunalx">𝐊𝐔𝐍𝐀𝐋❤️</a>'
+        CR = '<a href="https://t.me/IamTgJOKER">𝐌𝐑 𝐉𝐎𝐊𝐄𝐑 ❤️</a>'
         raw_text4 = "df"
         thumb = "no"
       
@@ -850,7 +850,7 @@ async def luminant_command(bot: Client, m: Message):
         raw_text3 = input3.text
         await input3.delete(True)
         if raw_text3 == 'df':
-            CR = '<a href="https://t.me/ikunalx">𝐊𝐔𝐍𝐀𝐋❤️</a>'
+            CR = '<a href="https://t.me/IamTgJOKER">𝐌𝐑 𝐉𝐎𝐊𝐄𝐑 ❤️</a>'
         else:
             CR = raw_text3    
         # Asking for thumbnail
