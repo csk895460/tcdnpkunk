@@ -23,12 +23,12 @@
         },
         "BOT_TOKEN": {
             "description": "Enter Your Telegram Bot Token",
-            "value": "7642805832:AAFISsNrEqRWx7Vz6bip42rhlNrTyjkvjAc",
+            "value": "7642805832:AAFip42rhlNrTyjkvjAc",
             "required": true
         },
         "BOT_NAME": {
             "description": "Enter Your Telegram Bot Name",
-            "value": "Autoca344p_bot",
+            "value": "t",
             "required": true
         },
         "MONGO_URI": {
